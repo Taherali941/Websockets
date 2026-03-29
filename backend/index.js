@@ -2,7 +2,7 @@
 // const express = require('express');
 // const path = require('path');
 // const { Server } = require('socket.io');
-
+//websockets
 // const app = express()
 // const server = http.createServer(app)
 // const io = new Server(server)
@@ -23,10 +23,6 @@
 // server.listen(3000,()=>{
 //     console.log(`app is running on port`)
 // })
-
-
-
-
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 

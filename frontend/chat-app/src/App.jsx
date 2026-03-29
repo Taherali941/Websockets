@@ -5,7 +5,7 @@ import { encryptMessage, decryptMessage } from "./crypto";
 import "./App.css";
 
 const socket = io("http://localhost:4000");
-
+//console.log(socket);
 function App() {
   const [message, setMessage] = useState("");
   const [chat, setChat] = useState([]);
