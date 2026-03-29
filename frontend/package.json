@@ -1,6 +1,6 @@
 {
   "name": "chat-app",
-  "homepage": "https://your-username.github.io/your-repo-name",
+  "homepage": "https://github.com/Taherali941/Websockets/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "crypto-js": "^4.2.0",
