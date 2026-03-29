@@ -4,7 +4,7 @@ import io from "socket.io-client";
 import { encryptMessage, decryptMessage } from "./crypto";
 import "./App.css";
 
-const socket = io("http://localhost:4000");
+const socket = io("https://chatapp-backend-qrae.onrender.com");
 //console.log(socket);
 function App() {
   const [message, setMessage] = useState("");
