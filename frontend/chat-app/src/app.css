@@ -1,59 +1,164 @@
 /* client/src/App.css */
 
-.container {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+* {
+  box-sizing: border-box;
 }
 
-.chat-box {
-  border: 1px solid #ccc;
-  height: 350px;
-  overflow-y: auto;
-  padding: 10px;
+body {
+  margin: 0;
+  background: #f4f6f9;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  height: 100vh;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  background: #f9f9f9;
+  background: #ffffff;
+  border-left: 1px solid #e6e8ec;
+  border-right: 1px solid #e6e8ec;
 }
 
+/* Header */
+.container h3 {
+  margin: 0;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid #e6e8ec;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Chat Area */
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #f9fafb;
+}
+
+/* Message Bubble */
 .message {
-  padding: 8px 12px;
-  border-radius: 10px;
-  margin: 5px 0;
-  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  max-width: 75%;
+  font-size: 14px;
+  line-height: 1.5;
   word-break: break-word;
   overflow-wrap: break-word;
   white-space: pre-wrap;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
+/* Sent Message */
 .message.me {
   align-self: flex-end;
-  background: #DCF8C6;
+  background: #2563eb;
+  color: #ffffff;
+  border-bottom-right-radius: 4px;
 }
 
+/* Received Message */
 .message.other {
   align-self: flex-start;
-  background: #E5E5EA;
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  border-bottom-left-radius: 4px;
 }
 
+/* Username */
 .user {
-  font-size: 12px;
+  font-size: 11px;
+  margin-bottom: 4px;
   opacity: 0.6;
-  margin-bottom: 2px;
 }
 
+/* Input Area */
 .input-box {
   display: flex;
-  margin-top: 10px;
+  padding: 12px;
+  border-top: 1px solid #e6e8ec;
+  background: #ffffff;
+  gap: 8px;
 }
 
+/* Input Field */
 .input-box input {
   flex: 1;
-  padding: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 14px;
+  transition: border 0.2s ease;
 }
 
+.input-box input:focus {
+  border-color: #2563eb;
+}
+
+/* Send Button */
 .input-box button {
-  margin-left: 10px;
-  padding: 8px 12px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.input-box button:hover {
+  background: #1e4ed8;
+}
+
+/* Scrollbar (clean) */
+.chat-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    height: 100vh;
+    border: none;
+  }
+
+  .chat-box {
+    padding: 12px;
+  }
+
+  .message {
+    max-width: 85%;
+    font-size: 13px;
+  }
+
+  .input-box {
+    padding: 10px;
+  }
+
+  .input-box input {
+    font-size: 13px;
+  }
+
+  .input-box button {
+    padding: 10px;
+  }
 }
